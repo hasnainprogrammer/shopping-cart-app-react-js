@@ -1,32 +1,96 @@
 .cartItem {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    gap: 1rem;
     align-items: center;
-    margin: 30px 0;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border-color);
 }
+
+.cartItem:last-child {
+    border-bottom: none;
+}
+
 .product {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
 }
+
 .product img {
-    width: 100px;
-    height: 100px;
-    margin-right: 50px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    background-color: var(--background-color);
 }
+
+.cartItem .removeCartItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.removeCartItem h5 {
+    font-size: 1.125rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.removeCartItem button {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    transition: color 0.2s;
+    margin: 0;
+}
+
+.removeCartItem button:hover {
+    color: #e11d48; /* Darker rose */
+}
+
 .quantity {
     display: flex;
     align-items: center;
-    font-size: 1rem;
+    gap: 0.5rem;
 }
-.removeCartItem > button,  .quantity > button {
-    padding: 3px 10px;
-    background: #333;
-    border: 1px solid #333;
-    margin: 0 10px;
-    color: #fff;
-    cursor: pointer;
-}
-.removeCartItem > button {
+
+.quantity p {
+    min-width: 2rem;
+    text-align: center;
+    font-weight: 500;
     margin: 0;
-    margin-top: 15px;
+}
+
+.quantity button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    margin: 0;
+}
+
+.quantity button:hover {
+    background-color: var(--background-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.cartItem > p {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
 }
