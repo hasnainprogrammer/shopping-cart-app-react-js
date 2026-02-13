@@ -1,0 +1,19 @@
+.CartItemListings {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+.CartItemListingsTitles {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px 100px;
+}
+hr {
+    color: rgb(0, 0, 0, 0.2);
+}
+.cartTotalRow {
+    text-align: end;
+    margin-right: 120px;
+}

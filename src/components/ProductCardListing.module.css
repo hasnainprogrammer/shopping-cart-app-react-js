@@ -1,0 +1,19 @@
+.productCardListing {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+h1 {
+    width: 80%;
+    margin: 50px auto;
+}
+:global(.noItems) {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(234, 236, 238);
+    margin-top: 30px;
+    color: #333;
+}

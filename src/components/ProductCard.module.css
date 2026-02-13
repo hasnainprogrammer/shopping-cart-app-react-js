@@ -1,0 +1,25 @@
+.productCard {
+    width: 80%;
+    padding: 40px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.productCard img {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.productCard > h5, .productCard > p, .productCard button {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+.productCard button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    cursor: pointer;
+}
