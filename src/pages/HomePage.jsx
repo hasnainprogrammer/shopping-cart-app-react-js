@@ -6,7 +6,7 @@ function HomePage({ carts, onAddToCart }) {
   return (
     <>
     <Navbar carts={carts} />
-    <ToastContainer />
+    <ToastContainer position="top-center" autoClose={2000} />
     <ProductCardListing onAddToCart={onAddToCart} />
     </>
   )

@@ -35,11 +35,23 @@ function App() {
     ))
   }
 
+  function handleSort(sortBy) {
+    setCarts(prevCarts => {
+      if (sortBy === "ascending") return [...prevCarts].sort((a, b) => a.price - b.price)
+      if (sortBy === "descending") return [...prevCarts].sort((a, b) => b.price - a.price)
+      return prevCarts
+    })
+  }
+
+  function handleClearCart() {
+    setCarts([])
+  }
+
   return (
     <BrowserRouter>
       <Routes>
         <Route index element={<HomePage carts={carts} onAddToCart={handleAddToCart} />} />
-        <Route path="/cart" element={<CartPage carts={carts} onQtyInc={handleQtyInc} onQtyDec={handleQtyDec} onRemoveCartItem={handleRemoveCartItem} />} />
+        <Route path="/cart" element={<CartPage carts={carts} onSort={handleSort} onClearCart={handleClearCart} onQtyInc={handleQtyInc} onQtyDec={handleQtyDec} onRemoveCartItem={handleRemoveCartItem} />} />
       </Routes>
     </BrowserRouter>
   )

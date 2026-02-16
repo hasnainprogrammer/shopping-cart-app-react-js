@@ -48,3 +48,34 @@ hr {
     color: var(--text-secondary);
     font-size: 1.25rem;
 }
+
+.filterOptions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.sortSelect {
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.clearCartBtn {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+    transition: color 0.2s;
+    margin: 0;
+}
+.clearCartBtn:hover {
+    color: #e11d48; 
+}
